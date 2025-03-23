@@ -34,11 +34,14 @@
 	<style>
 		/* Make the map full-screen */
 		#map {
-            width: 80%; 
-            height: 300px;
-            margin: 0 auto;
-            display: block;
-			z-index: 1000; 
+			width: 80%;
+  			height: 300px;
+    		margin: 50px auto;
+    		display: block;
+    		position: relative; 
+    		z-index: 1;
+			box-shadow: 0 0 25px 5px rgba(214, 81, 6, 0.9); #d65106;
+			border-radius: 8px;
 		}
 	</style>
 
@@ -88,7 +91,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
         // Create the map object and set the initial view (latitude, longitude, zoom level)
-        var map = L.map('map').setView([39.4426, -76.8357], 15);  // Reisterstown, MD coordinates
+        var map = L.map('map').setView([39.45717823838233, -76.82384896115907], 15);  // Reisterstown, MD coordinates
 
         // Add OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -96,8 +99,8 @@
         }).addTo(map);
 
         // Add a marker to the map
-        var marker = L.marker([39.4426, -76.8357]).addTo(map);
-        marker.bindPopup("<b>Royal Buffet & Grill</b>").openPopup();
+        var marker = L.marker([39.45717823838233, -76.82384896115907]).addTo(map);
+        marker.bindPopup("<b>Royal Buffet & Grill MD</b>").openPopup();
     </script>
 	<!-- End Map -->
 
