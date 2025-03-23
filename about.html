@@ -183,11 +183,12 @@
 					<div class="right-side-blog">
 						<h3>Search</h3>
 						<div class="blog-search-form">
-							<input name="search" placeholder="Search about" type="text">
-							<button class="search-btn">
+							<input id="search-input" name="search" placeholder="Search about" type="text">
+							<button class="search-btn" onclick="highlightSearchTerm()">
 								<i class="fa fa-search" aria-hidden="true"></i>
 							</button>
 						</div>
+						
 						<h3>Categories</h3>
 						<div class="blog-categories">
 							<ul>
@@ -214,7 +215,7 @@
 											<li><i class="zmdi zmdi-time"></i><span>15 MAR 2025</span></li>
 										</ul>
 										<a href="https://www.instagram.com/p/DHMB9HARYGJ/" target="_blank">
-											<h4>Come join us for the grand opening of Royal Buffet on March 15th @ Noon! There’ll be awesome performances, a fun Ribbon Cutting Ceremony, and so much more!</h4>
+											<h4>Come join us for the grand opening of Royal Buffet on March 15th @ Noon! There’ll be performances, a Ribbon Cutting Ceremony, and more!</h4>
 										</a>
 									</div>
 								</div>
@@ -237,7 +238,9 @@
 								</div>
 								<div class="recent-box-blog">
 									<div class="recent-img">
-										<img class="img-fluid" src="images/post-img-03.jpg" alt="">
+										<a href="https://www.fivestars.com/business/MD/Reisterstown/Restaurant/Royal-Buffet-Reisterstown/099ccc576bb04f41b82384e3b05cc25c/" target="_blank"> 
+											<img class="img-fluid" src="images/post-img-03.jpg" alt="">
+										</a>
 									</div>
 									<div class="recent-info">
 										<ul>
@@ -245,7 +248,9 @@
 											<li>|</li>
 											<li><i class="zmdi zmdi-time"></i><span>23 MAR 2025</span></li>
 										</ul>
-										<h4>Find us on FiveStars for bonus rewards and deals!</h4>
+										<a href="https://www.fivestars.com/business/MD/Reisterstown/Restaurant/Royal-Buffet-Reisterstown/099ccc576bb04f41b82384e3b05cc25c/" target="_blank">
+											<h4>Find us on FiveStars for bonus rewards and deals!</h4>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -268,7 +273,7 @@
 	<!-- End details -->
 		
 		<!-- Start Contact info -->
-		<div class="contact-imfo-box">
+		<div class="contact-info-box">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 arrow-right">
@@ -351,5 +356,6 @@
 		<script src="js/form-validator.min.js"></script>
 		<script src="js/contact-form-script.js"></script>
 		<script src="js/custom.js"></script>
+		<script src="js/search.js"></script>
 </body>
 </html>

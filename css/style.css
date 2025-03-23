@@ -576,17 +576,21 @@ button:focus{
     Contact info
 -------------------------------------------------------------------*/
 
-.contact-imfo-box{
+.contact-info-box{
 	background: #d65106;
 	padding: 30px 0;
 	border-radius: 100px;
+    align-items: center;
+    height: 180px;
+    display: flex;
+    justify-content: center; 
 }
 
 .overflow-hidden {
     overflow: hidden;
 }
 
-.contact-imfo-box i{
+.contact-info-box i{
 	display: block;
 	float: left;
 	width: 60px;
@@ -602,7 +606,7 @@ button:focus{
 	border-radius: 4px;
 	margin-right: 20px;
 }
-.contact-imfo-box h4 {
+.contact-info-box h4 {
     margin: 0px;
     margin-top: 5px;
 	color: #ffffff;
@@ -611,12 +615,20 @@ button:focus{
 	font-weight: 500;
 	line-height: 24px;
 }
-.contact-imfo-box p {
+.contact-info-box p {
     margin: 0px;
 	color: #ffffff;
 	font-weight: 300;
 }
 
+/*------------------------------------------------------------------
+    Search
+-------------------------------------------------------------------*/
+
+.highlight {
+    background-color: rgb(255, 211, 79);
+    font-weight: bold;
+}
 /*------------------------------------------------------------------
     Footer
 -------------------------------------------------------------------*/
