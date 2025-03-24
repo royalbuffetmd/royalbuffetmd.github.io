@@ -45,6 +45,13 @@
          url('../fonts/CaslonAntique.woff') format('woff'),
          url('../fonts/CaslonAntique.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'CaslonAntique-Bold';
+    src: url('../fonts/CaslonAntique-Bold.woff2') format('woff2'),
+         url('../fonts/CaslonAntique-Bold.woff') format('woff'),
+         url('../fonts/CaslonAntique-Bold.ttf') format('truetype');
+}
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
@@ -353,7 +360,7 @@ button:focus{
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 20px auto;
 }
 
@@ -505,6 +512,7 @@ button:focus{
 }
 
 .inner-menu-box{}
+
 .inner-menu-box .nav-pills .nav-link.active{
 	background: #d65106;
 }
