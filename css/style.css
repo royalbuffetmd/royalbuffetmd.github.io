@@ -1345,11 +1345,6 @@ blockquote {
 	border-color: #333333;
 }
 
-.right-side-blog h3 {
-    font-weight: 600;
-    font-size: 18px;
-    padding-bottom: 20px;
-}
 .blog-search-form {
     position: relative;
     border-bottom: 1px solid #010101;
@@ -1375,10 +1370,13 @@ blockquote {
 }
 
 .right-side-blog h3 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     padding-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* Adds a horizontal line */
+    margin-bottom: 20px; /* Ensures spacing below */
 }
+
 .blog-categories {
     padding-bottom: 30px;
     margin-bottom: 20px;
