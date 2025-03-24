@@ -13,17 +13,41 @@
 @import url(superslides.css);
 @import url(baguetteBox.min.css);
 
+
+/*------------------------------------------------------------------
+    FONTS
+-------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'Lucian Schoenschrift CAT';
+    src: url('../fonts/LucianSchoenschriftCAT.woff2') format('woff2'),
+         url('../fonts/LucianSchoenschriftCAT.woff') format('woff'),
+         url('../fonts/LucianSchoenschriftCAT.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tangerine Regular';
+    src: url('../fonts/Tangerine_Regular.woff2') format('woff2'),
+         url('../fonts/Tangerine_Regular.woff') format('woff'),
+         url('../fonts/Tangerine_Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tangerine Bold';
+    src: url('../fonts/Tangerine_Bold.woff2') format('woff2'),
+         url('../fonts/Tangerine_Bold.woff') format('woff'),
+         url('../fonts/Tangerine_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'CaslonAntique';
+    src: url('../fonts/CaslonAntique.woff2') format('woff2'),
+         url('../fonts/CaslonAntique.woff') format('woff'),
+         url('../fonts/CaslonAntique.ttf') format('truetype');
+}
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
-
-body {
-    color: #666666;
-    font-size: 15px;
-    font-family: 'Rubik', sans-serif;
-    line-height: 1.80857;
-}
-
 
 a {
     color: #1f1f1f;
@@ -318,6 +342,77 @@ button:focus{
 	background: #d65106;
 	border: 2px solid #d65106;
 }
+
+/*------------------------------------------------------------------
+    Buffet Menu
+-------------------------------------------------------------------*/
+
+.buffet-menu {
+    background: #fff4ee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.buffet-menu {
+    background: #fff4ee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.buffet-menu-title {
+    font-family: 'CaslonAntique', serif;;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.buffet-menu-items {
+    font-family: 'CaslonAntique', serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Container for the grid layout */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for categories */
+    gap: 20px; /* Space between columns */
+}
+
+/* Styling category headers */
+.category-header {
+    font-family: 'Lucian Schoenschrift CAT', cursive;
+    font-size: 30px;
+    color: #d65106;
+    margin-bottom: 10px;
+    text-align: center; /* Center the category headers */
+    width: 60%;
+    border-bottom: 2px solid #d65106; /* Orange line */
+    padding-bottom: 5px; /* Space between text and line */
+}
+
+/* Styling the items inside the grid columns */
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the column content */
+}
+
+/* Center align the list items under each category */
+.buffet-menu-items li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center; /* Center the menu items */
+}
+
 
 /*------------------------------------------------------------------
     About
@@ -1036,7 +1131,7 @@ button:focus{
 
 .blog-detail a{
 	color: #ffffff;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 
 .blog-box-inner .blog-detail:hover{
@@ -1046,13 +1141,16 @@ button:focus{
 .blog-inner-box {
     position: relative;
     margin: 0px 10px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 .side-blog-img {
-    box-shadow: 15px 15px 0px 0px rgba(214, 81, 6, 0.4);
-    -webkit-transition: all 1s ease 0.01s;
-    transition: all 1s ease 0.01s;
-    position: relative;
+    box-shadow: 15px 0px 10px rgba(214, 81, 6, 0.4);
+    height: auto;
+    width: 100%; 
+    flex-shrink: 0; 
+    flex-grow: 0;
+    display: block; 
+    margin-right: 20px; 
 }
 
 .date-blog-up {
@@ -1067,7 +1165,7 @@ button:focus{
 .inner-blog-detail {
     background: #ffffff;
     position: relative;
-    padding: 30px 20px;
+    padding: 50px 30px;
 }
 
 .inner-blog-detail h3 {
