@@ -19,15 +19,14 @@ function submitForm(){
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
+        url: "./php/form-process.php",
+        contentType: "application/x-www-form-urlencoded",
         data: { name: name, email: email, message: message },
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
+        success: function(response) {
+            console.log("Success:", response);
+        },
+        error: function(xhr, status, error) {
+            console.log("Error:", status, error);
         }
     });
 }
