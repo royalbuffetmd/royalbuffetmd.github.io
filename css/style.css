@@ -1373,8 +1373,6 @@ blockquote {
     font-weight: 600;
     font-size: 18px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ccc; /* Adds a horizontal line */
-    margin-bottom: 20px; /* Ensures spacing below */
 }
 
 .blog-categories {
