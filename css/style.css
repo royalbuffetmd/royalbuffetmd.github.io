@@ -1315,7 +1315,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .footer-social a span {
-  font-size: 24px; /* grows the actual icon */
+  font-size: 30px; /* grows the actual icon */
   line-height: 1;
 }
 
