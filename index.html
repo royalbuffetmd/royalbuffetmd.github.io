@@ -67,49 +67,51 @@
     <!-- END header -->
     
     <div class="slider-wrap">
-      <section class="home-slider owl-carousel">
-
-
+      <section class="home-slider owl-carousel owl-theme" style="touch-action: none;"> <!-- Ensure touch-action is none for better responsiveness -->
+        
         <div class="slider-item" style="background-image: url('img/slider-01.png');">
-          
           <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
-              <div class="col-md-8 text-center col-sm-12 ">
+              <div class="col-md-8 text-center col-sm-12">
                 <h1 data-aos="fade-up">Welcome to Royal Buffet</h1>
                 <p class="mb-5" data-aos="fade-up" data-aos-delay="100"><strong>102 Chartley Dr. <br> Reisterstown, MD 21136</strong></p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target = 'blank' class="btn btn-white btn-outline-white">Directions</a></p>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  <a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target="blank" class="btn btn-white btn-outline-white">Directions</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
+    
         <div class="slider-item" style="background-image: url('img/slider-02.png');">
           <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
-              <div class="col-md-8 text-center col-sm-12 ">
+              <div class="col-md-8 text-center col-sm-12">
                 <h1 data-aos="fade-up">Welcome to Royal Buffet</h1>
                 <p class="mb-5" data-aos="fade-up" data-aos-delay="100"><strong>102 Chartley Dr. <br> Reisterstown, MD 21136</strong></p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target = 'blank' class="btn btn-white btn-outline-white">Directions</a></p>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  <a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target="blank" class="btn btn-white btn-outline-white">Directions</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
+    
         <div class="slider-item" style="background-image: url('img/slider-03.png');">
           <div class="container">
             <div class="row slider-text align-items-center justify-content-center">
-              <div class="col-md-8 text-center col-sm-12 ">
+              <div class="col-md-8 text-center col-sm-12">
                 <h1 data-aos="fade-up">Welcome to Royal Buffet</h1>
                 <p class="mb-5" data-aos="fade-up" data-aos-delay="100"><strong>102 Chartley Dr. <br> Reisterstown, MD 21136</strong></p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target = 'blank' class="btn btn-white btn-outline-white">Directions</a></p>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  <a href="https://maps.app.goo.gl/BwsQBLRNFJnkYsT56" target="blank" class="btn btn-white btn-outline-white">Directions</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
-
       </section>
-    <!-- END slider -->
-    </div> 
+    </div>
     
 
 <section class="section bg-light pt-1 pb-1 bottom-slant-gray">
@@ -370,14 +372,14 @@
                 <p class="dishes-price">LUNCH</p>
                 <h2 class="dishes-heading">Monday - Friday: <br> 10:30AM - 3:30PM</h2>
               </div>
-              <img src="img/dishes_1.jpg" alt="" class="img-fluid">
+              <img src="img/lunch_cover.jpg" alt="" class="img-fluid">
             </a>
             <a href="#" class="item-dishes" data-aos="fade-right" data-aos-delay="200">
               <div class="text">
                 <p class="dishes-price">DINNER</p>
                 <h2 class="dishes-heading">Weekdays: <br> After Lunch <br> Weekends: <br> All Day</h2>
               </div>
-              <img src="img/dishes_2.jpg" alt="" class="img-fluid">
+              <img src="img/dinner_cover.jpg" alt="" class="img-fluid">
             </a>
           </div>
         </div>
@@ -521,6 +523,35 @@
     
 
     <script src="js/main.js"></script>
+    <!-- Include the necessary JS for Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $(".home-slider").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        1000: {
+          items: 1
+        }
+      },
+      touchDrag: true,  // Enable drag on mobile
+      mouseDrag: true   // Enable drag on desktop
+    });
+  });
+</script>
     
   </body>
 </html>
