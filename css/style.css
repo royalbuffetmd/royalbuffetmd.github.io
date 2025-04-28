@@ -1241,6 +1241,14 @@ header .navbar .cta-btn a:hover {
   margin-bottom: 0;
 }
 
+.phone-icon {
+  font-size: 14px; /* smaller size */
+  margin-right: 8px; /* space between icon and number */
+  color: #ffffff; /* adjust to match your design */
+  vertical-align: middle; /* aligns the icon nicely with text */
+  transform: scaleX(-1);
+}
+
 .list-unstyled.check li {
   position: relative;
   padding-left: 30px;
