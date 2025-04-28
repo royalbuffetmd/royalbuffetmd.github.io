@@ -43,6 +43,25 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OpenStreetMap with Leaflet</title>
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<style>
+		/* Make the map full-screen */
+		#map {
+			width: 54%;
+  			height: 600px;
+    		margin: 50px auto;
+    		display: block;
+    		position: relative; 
+    		z-index: 1;
+			  border-radius: 8px;
+        padding-bottom: 400px;
+		}
+	</style>
+
   </head>
   <body>
     
@@ -109,6 +128,26 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
           </div>
         </div>
       </div>
+
+      <!-- Start Map -->
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Create the map object and set the initial view (latitude, longitude, zoom level)
+        var map = L.map('map').setView([39.45717823838233, -76.82384896115907], 15);  // Reisterstown, MD coordinates
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        var marker = L.marker([39.45717823838233, -76.82384896115907]).addTo(map);
+        marker.bindPopup("<b>Royal Buffet & Grill MD</b>").openPopup();
+    </script>
+	<!-- End Map -->
 
 
       <div class="container">
