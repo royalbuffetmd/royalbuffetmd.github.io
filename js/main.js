@@ -184,21 +184,6 @@
     smartSpeed: 1000,
     dots: true,
   });
-  
-  // Touch fix for vertical scrolling inside owl carousels
-  var touchStartY = 0;
-
-  $('.owl-carousel').on('touchstart', function(e) {
-    touchStartY = e.originalEvent.touches[0].clientY;
-  });
-
-  $('.owl-carousel').on('touchmove', function(e) {
-    var touchCurrentY = e.originalEvent.touches[0].clientY;
-    if (Math.abs(touchCurrentY - touchStartY) > 10) {
-      e.stopPropagation();
-    }
-  });
-
 
 	var contentWayPoint = function() {
 		var i = 0;
